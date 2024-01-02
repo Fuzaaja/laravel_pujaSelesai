@@ -1,4 +1,4 @@
-@extends('template.master')
+@extends('template/master')
 
 @section('content')
     @if(session()->has('success'))
@@ -9,35 +9,33 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Siswa Man 3 medan</h3>
+            <h3 class="card-title">Data prestasi Man 3 medan</h3>
         </div>
         <div class="card-body">
-            <a href="{{ route('siswa.create') }}"><button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</button></a>
+            <a href="{{ route('prestasi.create') }}"><button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</button></a>
             <!-- Tabel data siswa -->
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>NIS</th>
+                        <th>judul</th>
                         <th>Foto</th>
-                        <th>Kelas</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($siswa as $data)
+                    @foreach($prestasi as $data)
                         <tr>
-                            <td>{{ $data->nama }}</td>
-                            <td>{{ $data->nis }}</td>
-                            <td><img src="{{ Storage::url('siswa/' . $data->foto) }}" style="width:150px" class="img-thumbnail"></td>
-                            <td>{{ $data->kelas }}</td>
+                            <td>{{ $data->judul }}</td>
+                            <td><img src="{{ Storage::url('prestasi/' . $data->foto) }}" style="width:150px" class="img-thumbnail"></td>
                             <td>
-                                <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('siswa.destroy', $data->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
-                                </form>
-                                <a href="{{ route('siswa.edit', $data->id) }}" class="btn btn-outline-warning"><i class="fa fa-edit"></i></a>
+                                <div class="row">
+                                    <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('prestasi.destroy', $data->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i> hapus</button>
+                                        <a href="{{ route('prestasi.edit', $data->id) }}" class="btn btn-outline-warning"><i class="fa fa-edit">update</i></a> 
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

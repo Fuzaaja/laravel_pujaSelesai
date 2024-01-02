@@ -57,7 +57,12 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="/">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="#about">Kepala sekolah</a></li>
+          <li><a class="nav-link scrollto" href="#services">jurusan</a></li>
+          <li><a class="nav-link scrollto " href="#prestasi">Prestasi</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Kegiatan</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">motivasi alumni</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Wakil kepala Madrasah</a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -83,7 +88,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
+        &copy; Copyright <strong>M.indramahfuz</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--

@@ -55,6 +55,8 @@ class SiswaController extends Controller
         return view('siswa.tampilan', compact('siswa'),['siswa' => $siswa] );
     }
 
+    
+
     /**
      * Show the form for editing the specified resource.
      */

@@ -9,26 +9,22 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Siswa Man 3 Medan</h3>
+            <h3 class="card-title">Data prestasi Man 3 Medan</h3>
         </div>
         <div class="card-body">
-            <!-- Tabel data siswa -->
+            <!-- Tabel data prestasi -->
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>NIS</th>
+                        <th>judul</th>
                         <th>Foto</th>
-                        <th>Kelas</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($siswa as $data)
+                    @foreach($prestasi as $data)
                         <tr>
-                            <td>{{ $data->nama }}</td>
-                            <td>{{ $data->nis }}</td>
-                            <td><img src="{{ Storage::url('siswa/' . $data->foto) }}" style="width:150px" class="img-thumbnail"></td>
-                            <td>{{ $data->kelas }}</td>
+                            <td>{{ $data->judul }}</td>
+                            <td><img src="{{ Storage::url('prestasi/' . $data->foto) }}" style="width:150px" class="img-thumbnail"></td>
                         </tr>
                     @endforeach
                 </tbody>

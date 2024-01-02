@@ -91,6 +91,7 @@
                             <li><a href="#">visi dan misi</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link scrollto " href="{{ route('login') }}">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -128,21 +129,15 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-6 about-img">
-                        <img src="assets/img/clients/kepsek.jpg" alt="">
+                        <img src="{{ Storage::url('kepala/' . $kepala[0]->foto) }}">
                     </div>
 
                     <div class="col-lg-6 content">
                         <h2>Kepala Sekolah</h2>
                         <h2>Madrasah Aliyah Negri 3 Medan</h2>
-                        <h3><strong>Hasanuddin Hasibuan, S.Pd. M.Si.</strong></h3>
+                        <h3><strong>{{$kepala[0]->nama}}</strong></h3>
                         <h3>Assalamualikum warohmatullahi wabrakatu</h3>
-                        <h3>Tak terhingga rasa terima kasih kami kepada allah swt yang memberikan kita kesempatan hidup
-                            dan nikmatnya</h3>
-                        <h3>Setiap klik, setiap kunjungan ke website resmi MAN 3 Medan adalah sentuhan tak ternilai.
-                            Bersama, kita membentuk jejak makna dan perjalanan yang tak terlupakan di dunia pendidikan.
-                            Terima kasih atas kepercayaan, kesetiaan, dan kolaborasi yang membangun jembatan menuju masa
-                            depan yang lebih baik bagi keluarga besar MAN 3 Medan. Semangat terus bersama, karena Anda
-                            adalah bagian berharga dari perjalanan pendidikan kami.</h3>
+                        <h3>T{{$kepala[0]->komen}}</h3>
                     </div>
                 </div>
 
@@ -232,29 +227,37 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2>Prestasi Man 3 Medan</h2>
-                    <p>Kilas Balik Prestasi Bersama saat ini man 3 medan meraih prestasi Baik di akademik maupun non akademik</p>
+                    <p>{{$prestasi[0]->judul}}</p>
                 </div>
                 {{-- gambar kegiatan --}}
                 <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="assets/img/clients/1.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/3.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/4.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/5.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/6.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/7.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/8.jpg" class="img-fluid"
-                                alt=""></div>
-                        <div class="swiper-slide"><img src="assets/img/clients/9.jpg" class="img-fluid"
-                                alt=""></div>
+
+                        { @foreach ($prestasi as $data ) {--ini tampilan untuk semua data foto yang efisien --}}
+
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $data->foto) }} "class="img-fluid" 
+                            ></div>
+
+                        @endforeach
+
+                        {{-- <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                            ></div>
+                        <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $prestasi->foto) }} "class="img-fluid" 
+                                ></div> --}}
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
