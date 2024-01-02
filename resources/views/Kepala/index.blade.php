@@ -33,9 +33,9 @@
                                 <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('kepala.destroy', $data->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                    <button type="submit" class="btn btn-outline-danger"><i class="fa fa-trash"></i>hapus</button>
                                 </form>
-                                <a href="{{ route('kepala.edit', $data->id) }}" class="btn btn-outline-warning"><i class="fa fa-edit"></i></a>
+                                <a href="{{ route('kepala.edit', $data->id) }}" class="btn btn-outline-warning"><i class="fa fa-edit">update</i></a>
                             </td>
                         </tr>
                     @endforeach

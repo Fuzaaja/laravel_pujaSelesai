@@ -36,8 +36,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-md-12 form-group">
-                            <label></label>
-                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul">
+                            <label>Judul</label>
+                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul yang di tampilkan hanya Pada judul pertama ">
                         </div>
                     </div>
                     <br>

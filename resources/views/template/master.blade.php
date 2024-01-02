@@ -57,9 +57,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="#about">Kepala sekolah</a></li>
+          <li><a class="nav-link scrollto" href="/kepala">Kepala sekolah</a></li>
           <li><a class="nav-link scrollto" href="#services">jurusan</a></li>
-          <li><a class="nav-link scrollto " href="#prestasi">Prestasi</a></li>
+          <li><a class="nav-link scrollto " href="/prestasi">Prestasi</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Kegiatan</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">motivasi alumni</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Wakil kepala Madrasah</a></li>

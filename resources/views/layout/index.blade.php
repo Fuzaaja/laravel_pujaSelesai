@@ -137,7 +137,8 @@
                         <h2>Madrasah Aliyah Negri 3 Medan</h2>
                         <h3><strong>{{$kepala[0]->nama}}</strong></h3>
                         <h3>Assalamualikum warohmatullahi wabrakatu</h3>
-                        <h3>T{{$kepala[0]->komen}}</h3>
+                        <h3>{{$kepala[0]->komen}}</h3>
+                        <h3>{{$kepala[1]->komen}}</h3>
                     </div>
                 </div>
 
@@ -233,7 +234,7 @@
                 <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper align-items-center">
 
-                        { @foreach ($prestasi as $data ) {--ini tampilan untuk semua data foto yang efisien --}}
+                         @foreach ($prestasi as $data ) {{--ini tampilan untuk semua data foto yang efisien --}}
 
                         <div class="swiper-slide"><img src="{{ Storage::url('prestasi/' . $data->foto) }} "class="img-fluid" 
                             ></div>
